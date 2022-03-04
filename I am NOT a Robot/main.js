@@ -1,6 +1,8 @@
 const checkbox = document.getElementById("checkbox");
 const submitBtn = document.querySelector("button[type=submit]");
+const colors = [];
 
+var j = 0;
 checkbox.disabled = true;
 submitBtn.disabled = true;
 
@@ -12,16 +14,18 @@ elements.forEach(function (element) {
 
     element.style.backgroundColor = color;
     element.innerHTML = color;
-    selectcolor.innerHTML = color;
+    selectcolor.innerHTML = colors[Math.floor(Math.random() *7)];
 })
 
 // Generate random color function
 function getRandomColor() {
     const letter = "0123456789ABCDEF";
+    
     let color = "#";
     for (let i = 0; i < 6; i++){
-        color += letter[Math.floor(Math.random() * 16 )];
+        color += letter[Math.floor(Math.random() * 16)];
     }
+    colors[j++] = color;
     return color;
 }
 

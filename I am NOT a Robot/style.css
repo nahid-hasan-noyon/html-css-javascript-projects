@@ -55,13 +55,14 @@ label {
 	justify-content: center;
 	align-items: center;
 	color: var(--ligh-c);
-	text-shadow: var(--text-shadow);
-	border-radius: 5px;
+	/* text-shadow: var(--text-shadow); */
+	border-radius: 10px;
 }
 
 .element:hover {
 	cursor: pointer;
 	box-shadow: inset 0 0 100px 5px var(--dark-c);
+	padding: 5px;
 }
 
 .greeny {
