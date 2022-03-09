@@ -8,8 +8,8 @@ body {
 	align-items: center;
 	text-align: center;
 	background-color: rgb(136, 86, 86);
-	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -20,7 +20,7 @@ body {
 
 h1 {
 	color: orange;
-	margin: 4rem 00;
+	margin: 4rem 0 2rem 0;
 	text-shadow: var(--text-shadow);
 }
 
@@ -32,18 +32,23 @@ h1 span {
 }
 
 label {
+	padding: 3rem;
 	color: var(--ligh-c);
 }
 
 .container {
-	margin-top: 3rem;
-	width: 350px;
-	height: 350px;
+	margin: 0 auto;
+	width: 380px;
+	height: 380px;
 	display: grid;
 	align-items: center;
+	align-content: space-evenly;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 10px;
-	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 10px 2px rgb(0 0 0 / 80%);
+	justify-content: center;
+	justify-items: center;
+	padding: 10px;
 }
 
 .element {
