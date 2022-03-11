@@ -7,7 +7,9 @@ window.onload = function () {
 
 	const startBtn = document.getElementById('start-btn');
 	const stopBtn = document.getElementById('stop-btn');
+	stopBtn.disabled = true;
 	const resetBtn = document.getElementById('reset-btn');
+	resetBtn.disabled = true;
 	console.log(minutes, tens, seconds);
 	console.log(startBtn, stopBtn, resetBtn);
 
@@ -19,8 +21,12 @@ window.onload = function () {
 	startBtn.onclick = function () {
 		// clearInterval(intervel);
 		intervel = setInterval(startTimer, 10);
+		startBtn.disabled = true;
+		stopBtn.disabled = false;
+		resetBtn.disabled = false;
 		dimEffect();
 	};
+
 	// Create Start Timer Function
 	function startTimer() {
 		tensSet++;
@@ -52,7 +58,11 @@ window.onload = function () {
 
 	stopBtn.onclick = function () {
 		clearInterval(intervel);
-		dimEffect();
+
+		startBtn.disabled = false;
+		stopBtn.disabled = true;
+		resetBtn.disabled = false;
+		dimEffectStop();
 		const lap = document.getElementById('laps');
 		const li = document.createElement('li');
 
@@ -63,6 +73,11 @@ window.onload = function () {
 
 	resetBtn.onclick = function () {
 		clearInterval(intervel);
+		dimEffectStop();
+
+		startBtn.disabled = false;
+		stopBtn.disabled = true;
+		resetBtn.disabled = true;
 
 		tensSet = '00';
 		secondsSet = '00';
@@ -75,6 +90,11 @@ window.onload = function () {
 
 	function dimEffect() {
 		const lapTime = document.querySelector('.lap-time');
-		lapTime.classList.toggle('dimming-effect');
+		lapTime.classList.add('dimming-effect');
+	}
+
+	function dimEffectStop() {
+		const lapTime = document.querySelector('.lap-time');
+		lapTime.classList.remove('dimming-effect');
 	}
 };
