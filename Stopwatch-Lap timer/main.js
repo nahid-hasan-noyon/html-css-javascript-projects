@@ -19,6 +19,7 @@ window.onload = function () {
 	startBtn.onclick = function () {
 		// clearInterval(intervel);
 		intervel = setInterval(startTimer, 10);
+		dimEffect();
 	};
 	// Create Start Timer Function
 	function startTimer() {
@@ -51,8 +52,11 @@ window.onload = function () {
 
 	stopBtn.onclick = function () {
 		clearInterval(intervel);
+		dimEffect();
 		const lap = document.getElementById('laps');
 		const li = document.createElement('li');
+
+		// template literals javascript
 		li.innerHTML = `lap: <span>${minutes.innerHTML}:${seconds.innerHTML},${tens.innerHTML}</span>`;
 		lap.appendChild(li);
 	};
@@ -68,4 +72,9 @@ window.onload = function () {
 		minutes.innerHTML = minutesSet;
 		document.getElementById('laps').innerHTML = '';
 	};
+
+	function dimEffect() {
+		const lapTime = document.querySelector('.lap-time');
+		lapTime.classList.toggle('dimming-effect');
+	}
 };
