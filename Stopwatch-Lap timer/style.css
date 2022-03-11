@@ -121,3 +121,7 @@ h2 {
 		color: black;
 	}
 }
+
+li {
+	list-style: none;
+}
