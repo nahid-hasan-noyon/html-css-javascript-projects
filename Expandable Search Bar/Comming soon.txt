@@ -1,0 +1,2 @@
+add history of last search
+expand below of history
