@@ -39,30 +39,29 @@ function showTime() {
 	document.getElementById('displayClock').innerHTML = time;
 	setTimeout(showTime, 1000);
 
-	// change body background
-	let backgroundImg;
-	const body = document.querySelector('body');
-	body.style.background = `${backgroundImg} cover/center`;
-
 	// User text
 
 	const userName = 'Nahid';
 	const user = document.getElementById('user');
+	// change body background
+	let backgroundImg;
 
 	if (hour < 8 && session === 'AM') {
-		backgroundImg = ``;
+		backgroundImg = `url(https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ybmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80)`;
 		user.innerHTML = `Good Morning, ${userName}`;
 	} else if (hour < 11 && session === 'AM') {
-		backgroundImg = ``;
+		backgroundImg = `url(https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ybmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80)`;
 		user.innerHTML = `Good Day, ${userName}`;
 	} else if (hour < 8 && session === 'PM') {
-		backgroundImg = ``;
+		backgroundImg = `url(https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ybmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80)`;
 		user.innerHTML = `Good Afternoon, ${userName}`;
 	} else {
-		backgroundImg = ``;
+		backgroundImg = `url(https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ybmluZ3xlbnwwfHwwfHw%3D&w=1000&q=80)`;
 		user.innerHTML = `Good night, ${userName}`;
 	}
 
+	const body = document.querySelector('body');
+	body.style.background = `${backgroundImg} center/cover`;
 	// focus
 	document
 		.querySelector('.focus-container input')
