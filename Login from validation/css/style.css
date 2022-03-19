@@ -20,7 +20,7 @@ body {
 	top: 20%;
 	margin: auto;
 	max-width: 700px;
-	height: 550px;
+	height: 450px;
 	background-color: rgba(20, 20, 20, 0.8);
 	color: #ddd;
 	border-radius: 25px;
@@ -57,3 +57,7 @@ i.far.fa-eye {
 .form-field.success input {
 	border-color: green;
 }
+/* 
+form:nth-of-type(2) {
+	display: none;
+} */

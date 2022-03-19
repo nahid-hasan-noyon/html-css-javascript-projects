@@ -64,3 +64,30 @@ function showSuccess(input) {
 	const alert_msg = formField.querySelector('.alert-msg');
 	alert_msg.style.visibility = 'hidden';
 }
+
+//** Request form */
+
+const requestForm = document.querySelector('.form-request');
+requestForm.style.display = 'none';
+const showRequestForm = document.querySelector('.reset-password');
+
+showRequestForm.addEventListener('click', function (e) {
+	e.preventDefault();
+	if (requestForm.style.display !== 'block') {
+		container.style.minHeight = '550px';
+		requestForm.style.display = 'block';
+	} else {
+		requestForm.style.display = 'none';
+		container.style.minHeight = 'initial';
+	}
+});
+
+requestForm.onclick = request();
+
+function request(e) {
+	e.preventDefault();
+	const requestEmail = document.getElementById('requestEmail');
+	if (requestEmail.value === '') {
+		showError(requestEmail, 'Email can not be empty');
+	} else showSuccess(requestEmail);
+}
