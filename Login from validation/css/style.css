@@ -48,3 +48,12 @@ i.far.fa-eye {
 	/* display: none; */
 	visibility: hidden;
 }
+
+.form-field.error input {
+	border-color: red;
+	/* border: ; */
+}
+
+.form-field.success input {
+	border-color: green;
+}
