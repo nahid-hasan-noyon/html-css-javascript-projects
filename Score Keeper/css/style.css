@@ -1,0 +1,18 @@
+* {
+	margin: auto;
+	height: auto;
+	width: auto;
+	text-align: center;
+}
+
+section {
+	margin-top: 20px;
+}
+
+.winner {
+	color: green;
+}
+
+.losser {
+	color: red;
+}
