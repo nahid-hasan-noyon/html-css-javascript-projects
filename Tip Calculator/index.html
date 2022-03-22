@@ -56,31 +56,31 @@
 
 	<!-- /*************** * BODY * ***************/ -->
 	<body>
-		<section id="container" class="card">
+		<section id="Container" class="card">
 			<h1 class="text-prim">Tip Calculator</h1>
-			<div id="calculator">
+			<div id="Calculator">
 				<form action="">
 					<div class="form-group">
-						<label for="bill">How much was your bill</label>
+						<label for="Bill">How much was your bill</label>
 						<input
 							type="text"
-							id="bill"
+							id="Bill"
 							placeholder="Enter bill amount"
 						/>
 					</div>
 					<div class="form-group">
-						<label for="amountOfPeople"
+						<label for="AmountOfPeople"
 							>How many people are sharing the bill</label
 						>
 						<input
 							type="number"
-							id="amountOfPeople"
+							id="AmountOfPeople"
 							placeholder="Enter the number of people"
 						/>
 					</div>
 					<h4 class="text-prim">How was your service?</h4>
 					<div class="input-fields">
-						<select id="serviceQual">
+						<select id="ServiceQual">
 							<option value="0" disabled selected>
 								Choose your option
 							</option>
@@ -91,7 +91,9 @@
 							<option value="0.05">5% Terible</option>
 						</select>
 					</div>
-					<button class="btn" type="submit">Calculate</button>
+					<button class="btn" id="Calculate" type="button">
+						Calculate
+					</button>
 				</form>
 			</div>
 			<br />
